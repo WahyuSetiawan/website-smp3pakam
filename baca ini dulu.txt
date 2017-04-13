@@ -1,0 +1,37 @@
+bila web ny tidak bisa di buka maka harus diaktifkan mod_rewrite
+
+Cara Mengaktifkan mod_rewrite
+
+Sebelum kita  membahas tentang cara mengaktifkan mod_rewrite, kita sekilas akan membahas tentang mahluk ini dulu. Pertama mod_rewrite adalah modul dari apache yang fungsinya menulis ulang alamat website sehingga lebih pendek atau lebih mudah dibaca serta “user friendly” terhadap mesin pencari.
+
+Sebagai contoh berikut ini adalah URL yang tidak memanfaatkan mod_rewrite
+
+http://www.example.com/Blog/Posts.php?Year=2006&Month=12&Day=19
+
+Jika alamat tadi di modifikasi oleh mod_rewrite maka url tersebut menjadi
+
+http://www.example.com/Blog/2006/12/19/
+
+Mudah dibaca bukan?
+
+Manfaat umum dari mod_rewrite adalah membuat URL website lebih mudah dibaca sedangkan kekuranganya tentunya lebih susah mendapatkan data yang dikirim dari user (ini untuk programer).
+
+Framework dan CMS yang memanfaatkan mod_rewrite
+
+Framework CodeIgniter adalah salah satu framework yang memanfaatkan mod_rewrite sedangkan CMS Lokal yang memanfaatkan mod_rewrite adakah CMS lokomedia.
+
+Cara Mengaktifkan mod)rewrite
+
+1. Buka file httpd.conf yang merupakan file konfigurasi apache , biasanya file ini ada di folder apache di bundel Apache php mySQL anda (XAMMP,WAMP dll)  atau di /etc/apache kalau di linux.
+
+2. Carilah baris berikut ini
+
+#LoadModule rewrite_module modules/mod_rewrite.so
+
+3. Buanglah tanda pagar di awal baris sehingga baris diatas menjadi
+
+LoadModule rewrite_module modules/mod_rewrite.so
+
+4.Restart Apache anda, jika anda tidak tahu caranya, cukup restart komputer.
+
+Seharusnya sekarang mod_rewrite sudah aktif web anda bisa berjalan dengan normal di Apache.
